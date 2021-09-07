@@ -11,6 +11,8 @@
 		B5C5849426E7E48900957D8E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C5849326E7E48900957D8E /* ContentView.swift */; };
 		B5C5849626E7E48A00957D8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5C5849526E7E48A00957D8E /* Assets.xcassets */; };
 		B5C5849926E7E48A00957D8E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5C5849826E7E48A00957D8E /* Preview Assets.xcassets */; };
+		B5C584A226E7E4BB00957D8E /* ColorCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C584A126E7E4BB00957D8E /* ColorCircle.swift */; };
+		B5C584A526E7ED9400957D8E /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C584A426E7ED9400957D8E /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		B5C5849526E7E48A00957D8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5C5849826E7E48A00957D8E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B5C5849A26E7E48A00957D8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5C584A126E7E4BB00957D8E /* ColorCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCircle.swift; sourceTree = "<group>"; };
+		B5C584A426E7ED9400957D8E /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			children = (
 				B5C5849126E7E48900957D8E /* HomeWorkProject_3_1App.swift */,
 				B5C5849326E7E48900957D8E /* ContentView.swift */,
+				B5C584A426E7ED9400957D8E /* ButtonView.swift */,
+				B5C584A126E7E4BB00957D8E /* ColorCircle.swift */,
 				B5C5849526E7E48A00957D8E /* Assets.xcassets */,
 				B5C5849A26E7E48A00957D8E /* Info.plist */,
 				B5C5849726E7E48A00957D8E /* Preview Content */,
@@ -140,6 +146,8 @@
 			files = (
 				B5C5849426E7E48900957D8E /* ContentView.swift in Sources */,
 				B5C5849226E7E48900957D8E /* HomeWorkProject_3_1App.swift in Sources */,
+				B5C584A526E7ED9400957D8E /* ButtonView.swift in Sources */,
+				B5C584A226E7E4BB00957D8E /* ColorCircle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
