@@ -32,7 +32,7 @@ struct ContentView: View {
                 Spacer()
                 ZStack {
                     ButtonView()
-                    Button(action: {
+                    Button(buttonTitle) {
                         buttonTitle = "NEXT"
                         
                         switch currentLight {
@@ -49,12 +49,10 @@ struct ContentView: View {
                             greenLight = isOn
                             currentLight = CurrentLight.red
                         }
-                    }, label: {
-                        Text(buttonTitle)
-                            .foregroundColor(.white)
-                            .font(.title)
-                            .frame(width: 170, height: 70, alignment: .center)
-                    })
+                    }
+                    .foregroundColor(.white)
+                    .font(.title)
+                    .frame(width: 170, height: 70, alignment: .center)
                 }
             }
         }
