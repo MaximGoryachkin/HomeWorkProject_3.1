@@ -7,25 +7,54 @@
 
 import SwiftUI
 
+enum CurrentLight {
+    case red, yellow, green
+}
+
 struct ContentView: View {
+    @State private var buttonTitle = "START"
+    @State private var currentLight = CurrentLight.red
+    @State private var redLight = 0.3
+    @State private var yellowLight = 0.3
+    @State private var greenLight = 0.3
+    private let isOn = 1.0
+    private let isOff = 0.3
+    
+    
     var body: some View {
         ZStack {
             Color(.black)
                 .ignoresSafeArea()
             VStack {
-                ColorCircle(color: .red)
-                ColorCircle(color: .yellow)
-                ColorCircle(color: .green)
+                ColorCircle(color: .red, opacity: redLight)
+                ColorCircle(color: .yellow, opacity: yellowLight).padding()
+                ColorCircle(color: .green, opacity: greenLight)
                 Spacer()
                 ZStack {
-                    Color(#colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.8225171293, alpha: 1))
-                        .frame(width: 150, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .cornerRadius(12)
-                        .padding()
-                    Button(action: {}, label: {
-                        Text("START")
+                    ButtonView()
+                    Button(action: {
+                        buttonTitle = "NEXT"
+                        
+                        switch currentLight {
+                        case .red:
+                            greenLight = isOff
+                            redLight = isOn
+                            currentLight = CurrentLight.yellow
+                        case .yellow:
+                            redLight = isOff
+                            yellowLight = isOn
+                            currentLight = CurrentLight.green
+                        case .green:
+                            yellowLight = isOff
+                            greenLight = isOn
+                            currentLight = CurrentLight.red
+                        }
+                    }, label: {
+                        Text(buttonTitle)
+                            .foregroundColor(.white)
+                            .font(.title)
+                            .frame(width: 170, height: 70, alignment: .center)
                     })
-                    .foregroundColor(.white)
                 }
             }
         }
@@ -34,6 +63,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+            ContentView()
     }
 }
